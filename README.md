@@ -22,7 +22,6 @@ src/
 tests/
   ui/           browser tests
   api/          HTTP tests
-.github/workflows/playwright.yml
 ```
 
 ## Setup
