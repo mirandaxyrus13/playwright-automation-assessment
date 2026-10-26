@@ -5,7 +5,10 @@ TypeScript Playwright framework for **UI** and **API** tests, with GitHub Action
 ## Stack
 
 - Playwright Test
-- TypeScript (strict)
+- Data Transfer Object
+- Web Elements
+- API Core
+- Third Party Library
 - Page Object Model for UI
 - API client layer for HTTP tests
 - Shared fixtures
@@ -16,12 +19,13 @@ TypeScript Playwright framework for **UI** and **API** tests, with GitHub Action
 src/
   api/          API clients
   config/       environment config
+  core/         library, web elements, API core objects
   fixtures/     Playwright fixtures
   pages/        page objects
-  types/        shared types
+  dto/          data transfer object
 tests/
   ui/           browser tests
-  api/          HTTP tests
+  api/          API tests
 ```
 
 ## Setup
@@ -30,16 +34,15 @@ tests/
 nvm use
 npm install
 npx playwright install --with-deps
-cp .env.example .env
 ```
 
 ## Run tests
 
 ```bash
-npm test              # UI (Chromium, Firefox, WebKit) + API
-npm run test:ui       # UI browsers only
-npm run test:api      # API only
-npm run test:chromium # Chromium UI only
-npm run typecheck     # TypeScript check (also runs in CI)
-npm run report        # open last HTML report
+npm run test:test:chrome:ui #UI Chrome Browser Test Runs
+npm run test:test:firefox:ui #UI Firefox Browser Test Runs
+npm run test:test:webkit:ui #UI WebKit Browser Test Runs   
+
+npm run test:api:test #API Test Runs
+
 ```
