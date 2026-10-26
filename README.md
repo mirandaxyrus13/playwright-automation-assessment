@@ -9,7 +9,6 @@ TypeScript Playwright framework for **UI** and **API** tests, with GitHub Action
 - Page Object Model for UI
 - API client layer for HTTP tests
 - Shared fixtures
-- GitHub Actions pipeline (`ubuntu-latest`, Node 22)
 
 ## Project layout
 
@@ -45,15 +44,3 @@ npm run test:chromium # Chromium UI only
 npm run typecheck     # TypeScript check (also runs in CI)
 npm run report        # open last HTML report
 ```
-
-Sample UI coverage uses [Sauce Demo](https://www.saucedemo.com). Sample API coverage uses [JSONPlaceholder](https://jsonplaceholder.typicode.com).
-
-## CI
-
-On push, pull request, and manual dispatch, `.github/workflows/playwright.yml`:
-
-1. Installs dependencies with `npm ci`
-2. Typechecks with `tsc --noEmit`
-3. Installs browsers with OS dependencies
-4. Runs the full Playwright suite
-5. Uploads the HTML report and JUnit/trace artifacts
