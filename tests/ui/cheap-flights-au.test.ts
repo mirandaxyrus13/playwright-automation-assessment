@@ -55,7 +55,7 @@ test.describe('Cheap Flights AU', () => {
 
   });
 
-  test.only('Verify if Cheap Flights AU provides searched flight results', async ({
+  test('Verify if Cheap Flights AU provides searched flight results', async ({
     mainPage,
     searchResultsPage,
     page,
