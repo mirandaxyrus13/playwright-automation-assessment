@@ -1,0 +1,48 @@
+{
+  "name": "playwright-automation-assessment",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Playwright TypeScript framework for UI and API automation",
+  "scripts": {
+    "test": "playwright test",
+    "test:test": "TEST_ENV=test playwright test",
+    "test:staging": "TEST_ENV=staging playwright test",
+
+    "test:test:chrome:ui": "TEST_ENV=test playwright test --project=chromium",
+    "test:test:firefox:ui": "TEST_ENV=test playwright test --project=firefox",
+    "test:test:webkit:ui": "TEST_ENV=test playwright test --project=webkit",
+
+    "test:staging:chrome:ui": "TEST_ENV=staging playwright test --project=chromium",
+    "test:staging:firefox:ui": "TEST_ENV=staging playwright test --project=firefox",
+    "test:staging:webkit:ui": "TEST_ENV=staging playwright test --project=webkit",
+
+    "test:ui": "playwright test --project=chromium --project=firefox --project=webkit",
+
+    "test:api": "playwright test --project=api",
+    "test:api:test": "TEST_ENV=test playwright test --project=api",
+    "test:api:staging": "TEST_ENV=staging playwright test --project=api",
+    "test:chromium": "playwright test --project=chromium",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "report": "playwright show-report",
+    "typecheck": "tsc --noEmit",
+    "install:browsers": "playwright install --with-deps"
+  },
+  "keywords": [
+    "playwright",
+    "typescript",
+    "ui-testing",
+    "api-testing"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.56.1",
+    "@types/node": "^24.9.1",
+    "dotenv": "^17.2.3",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^10.6.0"
+  }
+}
