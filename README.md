@@ -1,6 +1,6 @@
 # Playwright Automation Framework
 
-TypeScript Playwright framework for **UI** and **API** tests, with GitHub Actions CI.
+Playwright framework for **UI** and **API** tests,
 
 ## Stack
 
